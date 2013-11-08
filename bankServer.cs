@@ -35,7 +35,7 @@ namespace BankServer
                 Thread.Sleep(1);
             }
         }
-
+        //
 
         static void Main(string[] args)
         {
