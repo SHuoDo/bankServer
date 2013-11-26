@@ -6,6 +6,9 @@
 h2 {text-align:center; font: bold 30px arial,sans-serif;}
 body {text-align:center;}
 
+h1 {text-align:center; font: bold 14px arial,sans-serif;
+}
+
 input, textarea {   
 	padding: 9px;  
 	border: solid 1px #E5E5E5;  
@@ -43,22 +46,27 @@ input:focus, textarea:focus {
 <body>
 <h2>Bank Registration Form</h2>
 <form id="form"> 
-<input id="FirstName" type="text" name="firstname" placeholder="Enter First Name"/>
-<br>
-<br>
-<input id="LastName" type="text" name="lastname" placeholder="Enter Last Name" />
-<br>
-<br>
-<input id="Username" type="text" name="username" placeholder="Create Username" />
-<br>
-<br>
-<input id="Password" type="password" name="password" placeholder="Create Password" />
-<br>
-<br>
-<input id="Amount" type="text" name="amount" placeholder="Deposit Amount" />
-<br>
-<br>
-<input id="input" type="submit" name="submit" value="Submit" />
+
+<h1>Section 1 | Personal Information</h1>
+<input id="Text2" type="text" name="firstname" placeholder="First name"/><br />
+<input id="Text3" type="text" name="lastname" placeholder="Last name"/><br />
+<input id="Birth" type="text" name="birth" placeholder="ddmmyyyy" /><br />
+<input id="social" type="text" name="social" placeholder="Social Insurance #" /><br />
+
+<h1>Section 2 | Contact Information</h1>
+<input id="Address" type="text" name="address" placeholder="Main Address"/><br />
+<input id="City" type="text" name="city" placeholder="City"/><br />
+<input id="State" type="text" name="state" placeholder="Province or State"/><br />
+<input id="Country" type="text" name="country" placeholder="Country"/><br />
+<input id="Postal Code" type="text" name="postal" placeholder="Postal code"/><br />
+
+<h1>Section 3 | Account Information</h1>
+<input id="Email" type="text" name="email" placeholder="Email address"/><br />
+<input id="Username" type="text" name="username" placeholder="Create Username" /><br />
+<input id="Password" type="password" name="password" placeholder="Create Password" /><br />
+<input id="Amount" type="text" name="amount" placeholder="Deposit Amount" /><br />
+<br />
+<input id="input" type="submit" name="submit" value="Sign Up" />
 </form>
 
 <script>
@@ -92,7 +100,7 @@ input:focus, textarea:focus {
     $(document).ready(function () {
         $('#input').click(function () {
 
-            //alert($("#form").formToJSON());				//<----------------- USED TO SHOW THE JSON POST, UNCOMMENT IF WANT TO SEE!
+           //alert($("#form").formToJSON());				//<----------------- USED TO SHOW THE JSON POST, UNCOMMENT IF WANT TO SEE!
 
             var send = $("#form").formToJSON();
             $.ajax({
